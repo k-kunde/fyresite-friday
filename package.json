@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=0e2c43a841ec"
+    "chromatic": "npx chromatic --project-token=97522c44680f"
+  },
+  "resolutions": {
+    "@emotion/styled": "^11.0.0"
   },
   "dependencies": {
     "@emotion/react": "^11.5.0",
@@ -18,27 +21,34 @@
     "@mui/icons-material": "^5.0.4",
     "@mui/material": "^5.0.4",
     "@mui/styles": "^5.0.1",
+    "axios": "^0.26.1",
     "mongodb": "^3.6.9",
+    "mui-modal-provider": "^2.0.0",
     "next": "11.0.1",
     "next-auth": "^3.27.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-easy-crop": "^4.1.4",
+    "react-hook-form": "^7.17.4",
+    "redux": "^4.1.2",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.0",
     "sass": "^1.35.1",
     "typescript": "^4.4.4"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
-    "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
-    "@storybook/react": "^6.3.12",
+    "@storybook/addon-actions": "^6.4.8",
+    "@storybook/addon-essentials": "^6.4.8",
+    "@storybook/addon-links": "^6.4.8",
+    "@storybook/react": "^6.4.8",
     "@svgr/webpack": "^5.5.0",
-    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
-    "chromatic": "^6.0.6",
+    "chromatic": "^6.0.5",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.1",
     "eslint-plugin-testing-library": "^5.0.0",
@@ -53,7 +63,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && ./node_modules/.bin/eslint ."
     }
   },
   "lint-staged": {
