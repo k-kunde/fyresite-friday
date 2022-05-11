@@ -1,7 +1,27 @@
 {
-    "page": {
-      "url": "/",
-      "title": "Page 1"
+    "appBar": {
+        "title": "Sample Code",
+        "buttons": [
+            {"child": "Page 1", "href": "/"},
+            {"child": "Page 2", "href": "/"},
+            {"child": "Page 3", "href": "/"},
+            {"child": "Page 4", "href": "/"}
+        ]
+    },
+    "body": {
+        "child": "Container"
+    },
+    "bottomNavigationBar": {
+        "child": "Component"
+    },
+    "drawer": {
+        "items":[
+            {"label": "Item 1", "href": "/"},
+            {"label": "Item 2", "href": "/"},
+            {"label": "Item 3", "href": "/"},
+            {"label": "Item 4", "href": "/"},
+            {"label": "Item 5", "href": "/"},
+            {"label": "Item 6", "href": "/"}
+        ]
     }
-    
-  }
+}
